@@ -1,0 +1,32 @@
+{
+    "name": "Test Recorder Extension",
+    "version": "1.0",
+    "description": "Record and download manual test steps with screenshots.",
+    "manifest_version": 3,
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "service_worker.js"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Test Recorder"
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "host_permissions": ["<all_urls>"],
+        "matches": ["<all_urls>"],
+        "js": ["content/contentScript.js"]
+      }
+    ]
+  }
+  

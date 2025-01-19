@@ -1,0 +1,38 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test Recorder</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Test Recorder</h1>
+
+      <div class="controls">
+        <input type="text" id="testPlanName" placeholder="Test Plan Name" />
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resumeBtn">Resume</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+
+      <table id="stepsTable">
+        <thead>
+          <tr>
+            <th>Step #</th>
+            <th>Event</th>
+            <th>Element</th>
+            <th>Screenshot</th>
+          </tr>
+        </thead>
+        <tbody id="stepsBody"></tbody>
+      </table>
+    </div>
+
+    <script src="../lib/jszip.min.js"></script>
+    <script src="../lib/FileSaver.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
